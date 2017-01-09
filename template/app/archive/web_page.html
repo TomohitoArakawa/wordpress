@@ -1,0 +1,77 @@
+<$mt:Include module="header.html"$>
+
+<mt:SetVarBlock name="page_folder"><$mt:FolderLabel$></mt:SetVarBlock>
+
+<mt:If name="page_folder" eq="thai">
+<!--タイ-->
+<ul class="entry">
+<mt:Entries category="thai">
+<li class="entry__list">
+  <div class="list__header">
+    <h2 class="list__tiltle"><$mt:EntryTitle$></h2>
+    <div class="list__date"><$mt:EntryDate format="%Y年%m月%d日"$></div>
+  </div>
+  <div class="list__image">
+      <figure><img src="<mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnail></mt:If>"></figure>
+  </div>
+  <div class="list__body"><$mt:EntryBody$></div>
+</li>
+</mt:Entries>
+</ul>
+
+<mt:Else name="page_folder" eq="laos">
+<!--ラオス-->
+<ul class="entry__list">
+<mt:Entries category="laos">
+<li class="entry__list">
+  <div class="list__header">
+    <h2 class="list__tiltle"><$mt:EntryTitle$></h2>
+    <div class="list__date"><$mt:EntryDate format="%Y年%m月%d日"$></div>
+  </div>
+  <div class="list__image">
+      <figure><img src="<mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnail></mt:If>"></figure>
+  </div>
+  <div class="list__body"><$mt:EntryBody$></div>
+</li>
+</mt:Entries>
+
+<mt:Else name="page_folder" eq="nepal">
+<!--ネパール-->
+<ul class="entry__list">
+<mt:Entries category="nepal">
+<li class="entry__list">
+  <div class="list__header">
+    <h2 class="list__tiltle"><$mt:EntryTitle$></h2>
+    <div class="list__date"><$mt:EntryDate format="%Y年%m月%d日"$></div>
+  </div>
+  <div class="list__image">
+      <figure><img src="<mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnail></mt:If>"></figure>
+  </div>
+  <div class="list__body"><$mt:EntryBody$></div>
+</li>
+</mt:Entries>
+</ul>
+
+<mt:Else name="page_folder" eq="myanmar">
+<!--ミャンマー-->
+<ul class="entry__list">
+<mt:Entries category="myanmar">
+<li class="entry__list">
+  <div class="list__header">
+    <h2 class="list__tiltle"><$mt:EntryTitle$></h2>
+    <div class="list__date"><$mt:EntryDate format="%Y年%m月%d日"$></div>
+  </div>
+  <div class="list__image">
+      <figure><img src="<mt:If tag="EntryDataThumbnail"><mt:EntryDataThumbnail></mt:If>"></figure>
+  </div>
+  <div class="list__body"><$mt:EntryBody$></div>
+</li>
+</mt:Entries>
+</ul>
+
+<mt:Else>
+<!--index-->
+<$mt:Include module="public_relations.html"$>
+</mt:If>
+
+<$mt:Include module="footer.html"$>
