@@ -1,2 +1,2 @@
-# movable_type
-Movable Typeのテンプレート
+# wordpress
+wordpressのテンプレート、制作環境
